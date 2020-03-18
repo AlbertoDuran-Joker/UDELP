@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colores"
+    tools:context=".Util.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="72dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtEncuesta"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtNombreRegistro"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bordes"
+                android:ems="8"
+                android:hint="@string/hintNombre"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvRegistro" />
+
+            <EditText
+                android:id="@+id/edtApellidoPaternoRegistro"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bordes"
+                android:ems="10"
+                android:hint="@string/hintApellidoPaterno"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNombreRegistro" />
+
+            <EditText
+                android:id="@+id/edtApellidoMaternoRegistro"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bordes"
+                android:ems="10"
+                android:hint="@string/hintApellidoMaterno"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidoPaternoRegistro" />
+
+            <EditText
+                android:id="@+id/edtCorreoRegistro"
+                android:layout_width="175dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="125dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bordes"
+                android:ems="10"
+                android:hint="@string/hintCorreo"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintBottom_toTopOf="@+id/spnViajadoRegistro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidoMaternoRegistro" />
+
+            <Spinner
+                android:id="@+id/spnGeneroRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="188dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/Genero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidoMaternoRegistro" />
+
+            <Spinner
+                android:id="@+id/spnViajadoRegistro"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/Viajado"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnGeneroRegistro" />
+
+            <Spinner
+                android:id="@+id/spnFrecuenciaRegistro"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/Frecuencia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnViajadoRegistro" />
+
+            <Spinner
+                android:id="@+id/spnExperienciaRegistro"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/Experiencia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnFrecuenciaRegistro" />
+
+            <TextView
+                android:id="@+id/txvPreguntaEsquema"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="@string/txtEsquema"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnExperienciaRegistro" />
+
+            <CheckBox
+                android:id="@+id/ckbEjecutiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtEjecutiva"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvPreguntaEsquema"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/ckbEconomica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtEconomica"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.185"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvPreguntaEsquema"
+                tools:ignore="MissingConstraints" />
+
+            <CheckBox
+                android:id="@+id/ckbPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txtPromo"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:buttonTint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.744"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvPreguntaEsquema"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/txvPreguntaServicio"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="@string/txtServicio"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ckbEconomica" />
+
+            <RadioGroup
+                android:id="@+id/rdgServicio"
+                android:layout_width="305dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvPreguntaServicio">
+
+                <RadioButton
+                    android:id="@+id/rdbExcelente"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtExcelente"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"/>
+
+                <RadioButton
+                    android:id="@+id/rdbBueno"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtBueno"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"/>
+
+                <RadioButton
+                    android:id="@+id/rdbMalo"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtMalo"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtMejoras"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bordes"
+                android:ems="10"
+                android:hint="@string/hintMejoras"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.54"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgServicio" />
+
+            <Switch
+                android:id="@+id/swtOfertasDescuentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/txtOfertasDescuentos"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtMejoras" />
+
+            <Button
+                android:id="@+id/btnEnviarRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="@string/btnEnviar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/swtOfertasDescuentos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

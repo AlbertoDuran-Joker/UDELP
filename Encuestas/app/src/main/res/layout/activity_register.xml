@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/figurabs"
+    tools:context=".Util.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/txtTituloRegistro"
+                android:textSize="40sp"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtNombreRegistro"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/hintNombre"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvRegistro" />
+
+            <EditText
+                android:id="@+id/edtApellidoPaterno"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/hintApellidoPaterno"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNombreRegistro" />
+
+            <EditText
+                android:id="@+id/edtApellidoMaterno"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/hintApellidoMaterno"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:inputType="textPersonName"
+                android:background="@drawable/bordes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidoPaterno" />
+
+            <EditText
+                android:id="@+id/edtTelefono"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/hintTelefono"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidoMaterno" />
+
+            <RadioGroup
+                android:id="@+id/rdgGenero"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/edtTelefono">
+
+                <RadioButton
+                    android:id="@+id/rdbMasculino"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtMasculino"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"/>
+
+                <RadioButton
+                    android:id="@+id/rdbFemenino"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtFemenino"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"/>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spnDelegacion"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/Delegacion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdgGenero" />
+
+            <EditText
+                android:id="@+id/edtDireccion"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="@string/hintDireccion"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/spnDelegacion" />
+
+            <Spinner
+                android:id="@+id/spnEdoCivil"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="180dp"
+                android:background="@drawable/bordes"
+                android:entries="@array/EdoCivil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDireccion" />
+
+            <EditText
+                android:id="@+id/edtCorreo"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/hintCorreo"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnEdoCivil" />
+
+            <EditText
+                android:id="@+id/edtContrasenaRegistro"
+                android:layout_width="300dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="@string/hintContrasena"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:background="@drawable/bordes"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="@string/btnEnviar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/edtContrasenaRegistro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
